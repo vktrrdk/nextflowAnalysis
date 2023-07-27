@@ -19,7 +19,7 @@ services:
     restart: unless-stopped
   nfa_api:
     container_name: nfa_api
-    image: quay.io/vktrrdk/traceflow-api:0.0.3
+    image: quay.io/vktrrdk/traceflow-api:0.0.4
     # build:
     #  context: fastapi/
     #  dockerfile: Dockerfile
