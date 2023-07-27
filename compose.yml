@@ -19,7 +19,7 @@ services:
     restart: unless-stopped
   nfa_api:
     container_name: nfa_api
-    image: quay.io/vktrrdk/traceflow-api:0.0.1
+    image: quay.io/vktrrdk/traceflow-api:0.0.3
     # build:
     #  context: fastapi/
     #  dockerfile: Dockerfile
@@ -36,11 +36,13 @@ services:
       - nfa_db
     command: bash -c "cd /app/alembic && alembic upgrade head && cd .. && uvicorn main:app --host 0.0.0.0 --port 80"
     restart: unless-stopped
+    volumes:
+      - ./config/alembic/env.py:/app/alembic/env.py
     networks:
       - nfa
   nfa_ui:
     container_name: nfa_ui
-    image: quay.io/vktrrdk/traceflow-ui:0.0.1
+    image: quay.io/vktrrdk/traceflow-ui:0.0.2
     # build:
     #  context: .
     #  dockerfile: Dockerfile
@@ -48,6 +50,8 @@ services:
       - "8001:8001"
     networks:
       - nfa
+    volumes:
+      - ./config/vite/vite.config.ts:/var/www/vite.config.ts
 networks:
   nfa:
     name: nfa
