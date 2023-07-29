@@ -23,3 +23,6 @@ Create a new token and then click "manage" to get to the view instruction the us
 The `with-weblog http://localhost:8000/run/<token-id>/` flag needs to be set when executing the nextflow-workflow.
 The metrics and the progress then get automatically updated on the corresponding UI-page (http://localhost:8001/run/<token-id>/).
 
+## Connected repositores
+
+The application is based on an [API-component](https://github.com/vktrrdk/nextflowAnalysisAPI) and a [frontend-component](https://github.com/vktrrdk/nextflowAnalysisUI).
