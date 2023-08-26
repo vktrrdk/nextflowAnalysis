@@ -11,7 +11,7 @@ There are several default values set in the `.env`-file and can be changed if wi
 - `API_TAG` referencing the version of the API-image to be retrieved from quay.io
 - `UI_TAG` referencing the version of the UI-image to be retrieved from quay.io
 
-Just run `docker-compose -d`, as the images needed are defined in the compose-file.
+Run `docker-compose up -d`, as the images needed are defined in the compose-file.
 Default ports of the stack are:
  - 5432 for database
  - 8001 for UI
