@@ -1,11 +1,18 @@
 # TraceFlow
 
-**Note**: Some values are still hardcoded in the code of the repositories, so changing values in the `.env`-file might not have any effects yet.
 
 ## Setting up
 
+There are several default values set in the `.env`-file and can be changed if wished. This includes:
+- `POSTGRES_HOST`
+- `POSTGRES_DB`
+- `POSTGRES_USER`
+- `POSTGRES_PASSWORD`
+- `API_TAG` referencing the version of the API-image to be retrieved from quay.io
+- `UI_TAG` referencing the version of the UI-image to be retrieved from quay.io
+
 Just run `docker-compose -d`, as the images needed are defined in the compose-file.
-Current ports of the stack are:
+Default ports of the stack are:
  - 5432 for database
  - 8001 for UI
  - 8000 for API
