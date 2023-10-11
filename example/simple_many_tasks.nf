@@ -1,3 +1,5 @@
+params.numberOfTasks = 5000
+
 process sleep {
   input:
     val x
@@ -8,5 +10,5 @@ process sleep {
 }
 
 workflow {
-  channel.from(0..200) | sleep
+  channel.from(0..params.numberOfTasks) | sleep
 }
