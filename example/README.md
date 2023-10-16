@@ -1,5 +1,13 @@
 # Example scripts
 
+All scripts can be executed either locally or using the SLURM scheduler by providing the corresponding profile:
+
+```
+-profile PROFILE
+```
+
+where PROFILE can be either "slurm" or "standard".
+
 ## Stress cpu
 
 ### Requirement
