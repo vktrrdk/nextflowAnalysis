@@ -1,5 +1,8 @@
 # TraceFlow
 
+### Please consider
+
+The current version is only working with nextflow version 22
 
 ## Setting up
 
