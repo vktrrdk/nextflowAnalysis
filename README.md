@@ -1,8 +1,8 @@
 # TraceFlow
 
-### Please consider
+### Current Todo
 
-The current version is only working with nextflow version 22
+* Fix Access-Control-Allow-Origin
 
 ## Setting up
 
@@ -22,7 +22,10 @@ Default ports of the stack are:
 
 ## Get Started
 
+*Needs adjustments*
+
 Start the stack as described. 
+
 
 ### Token Creation
 Go to `localhost:8001" and click on "Go to token management".
