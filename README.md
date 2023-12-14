@@ -7,6 +7,7 @@
 ## Setting up
 
 There are several default values set in the `.env`-file and can be changed if wished. This includes:
+- `REDIS_HOST`
 - `POSTGRES_HOST`
 - `POSTGRES_DB`
 - `POSTGRES_USER`
@@ -22,9 +23,12 @@ Default ports of the stack are:
 
 ## Get Started
 
-*Needs adjustments*
+Start the stack as follows:
 
-Start the stack as described. 
+`docker-compose up -d --scale redis_persist_worker=3 --remove-orphans`.
+
+The number of persist_workers can be adjusted. 
+It indicates how many worker containers are to be started in parallel to process the requests from the queue.
 
 
 ### Token Creation

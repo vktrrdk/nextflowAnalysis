@@ -2,7 +2,7 @@ params.memoryLimit="4 GB"
 params.secondLim="30 GB"
 params.thirdLim="10 GB"
 params.fourthLim="24 GB"
-
+params.numberOfTasks=100
 
 process ram_test_1 {
 
@@ -53,5 +53,5 @@ process ram_test_3 {
 }
 
 workflow {
-  channel.from(0..0) | (ram_test_1 & ram_test_2 & ram_test_3)
+  channel.from(0..params.numberOfTasks) | (ram_test_1 & ram_test_2 & ram_test_3)
 }
