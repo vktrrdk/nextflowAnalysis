@@ -7,7 +7,7 @@ params.numberOfTasks=100
 process ram_test_1 {
 
   memory params.memoryLimit
-
+  tag "try: $x"
   input:
     val x
 
@@ -21,7 +21,7 @@ process ram_test_1 {
 process ram_test_2 {
 
   memory params.memoryLimit
-
+  tag "$x"
   input:
     val x
 
@@ -40,7 +40,7 @@ process ram_test_2 {
 process ram_test_3 {
 
   memory params.memoryLimit
-
+  tag "$x: test"
   input:
     val x
 
