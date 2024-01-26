@@ -4,7 +4,7 @@ params.memoryLimit="4 GB"
 process ram_100 {
 
   memory params.memoryLimit
-
+  tag "test: whatx"
   input:
     val x
 
@@ -15,7 +15,7 @@ process ram_100 {
 }
 
 process ram_50 {
-
+  tag "try: $x"
   memory params.memoryLimit
 
   input:
