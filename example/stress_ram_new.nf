@@ -21,6 +21,7 @@ process ram_test_1 {
 process ram_test_2 {
 
   memory params.memoryLimit
+  tag "test: wildcard"
 
   input:
     val x
@@ -40,7 +41,7 @@ process ram_test_2 {
 process ram_test_3 {
 
   memory params.memoryLimit
-
+  tag "singletag"
   input:
     val x
 

@@ -1,11 +1,11 @@
-params.numberOfTasks = 2500
+params.numberOfTasks = 1200
 
 process sleep {
   input:
     val x
 
   """
-  sleep 5
+  sleep 0.1
   """
 }
 
